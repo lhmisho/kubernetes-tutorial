@@ -1,0 +1,23 @@
+kubectl create -f replicaset-definition.yaml
+kubectl get replicaset
+kubectl delete replicaset myapp-replicaset
+kubectl replace -f file-name
+kubectl scale --replicas=6 -f file-name.yaml
+kubectl scale --replicas=6 replicaset myapp-rc
+
+kubectl rollout status deployment/myapp-deployment
+kubectl rollout history deployment/myapp-demployment
+
+
+# Deployments command
+create -> kubectl create -f deployment-definition.yaml
+get -> kubectl get deployment
+update -> kubectl apply -f deployment-definition.yaml
+          kubectl set image deployment/myapp-deployment nginx=nginx:1.9.1 // update image
+
+status -> kubectl rollout status deployment/myapp-deployment
+rollback -> kubectl rollout undo deployment/myapp-deployment
+history -> kubectl rollout history deployment/myapp-deployment
+edit -> kubectl edit deployment myapp-deployment --record
+
+
