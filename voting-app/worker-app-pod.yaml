@@ -3,11 +3,9 @@ kind: Pod
 metadata: 
   name: worker-app-pod
   labels:
-    name: worker-pod
+    name: worker-app-pod
     app: demo-voting-app
 spec:
   containers:
     - name: worker-app
       image: kodekloud/examplevotingapp_worker:v1
-      ports:
-        - containerPort: 6379
