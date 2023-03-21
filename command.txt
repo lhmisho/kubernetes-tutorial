@@ -1,5 +1,20 @@
+# POD command
+kubectl create -f pod-defination.yaml
+kubectl apply -f pod.yaml
+kubectl get pods
+kubectl describe pod myapp-pod
+
+# replicaset command
+
+apiVersion:
+kind:
+metadata:
+spec:
+
+
 kubectl create -f replicaset-definition.yaml
 kubectl get replicaset
+kubectl edit replicaset my-replicaset
 kubectl delete replicaset myapp-replicaset
 kubectl replace -f file-name
 kubectl scale --replicas=6 -f file-name.yaml
@@ -21,3 +36,4 @@ history -> kubectl rollout history deployment/myapp-deployment
 edit -> kubectl edit deployment myapp-deployment --record
 
 
+I hear and I forget. I see and I remember. I do and I understand.
